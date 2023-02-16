@@ -21,11 +21,8 @@ import { HiLockClosed } from "react-icons/hi";
 import React, { useState } from "react";
 import {
   doc,
-  DocumentReference,
-  getDoc,
   runTransaction,
   serverTimestamp,
-  setDoc,
 } from "firebase/firestore";
 import { auth, firestore } from "@/firebase/clientApp";
 import { useAuthState } from "react-firebase-hooks/auth";
