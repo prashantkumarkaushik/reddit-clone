@@ -31,7 +31,7 @@ export const AuthModal: React.FC = () => {
   useEffect(() => {
     if (user) handleClose();
     console.log("USER: ", user);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   return (
@@ -58,18 +58,17 @@ export const AuthModal: React.FC = () => {
               justify="center"
               width="70%"
             >
-            {
-                modalState.view === 'login' || modalState.view === 'signup' ? (
+              {modalState.view === "login" || modalState.view === "signup" ? (
                 <>
-                <OAuthButtons />
-                <Text color="gray.500" fontWeight={700}>
-                OR
-                </Text>
-                <AuthInputs />
+                  <OAuthButtons />
+                  <Text color="gray.500" fontWeight={700}>
+                    OR
+                  </Text>
+                  <AuthInputs />
                 </>
-                ):
+              ) : (
                 <ResetPassword />
-              }
+              )}
             </Flex>
           </ModalBody>
         </ModalContent>
